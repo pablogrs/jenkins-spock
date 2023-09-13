@@ -86,7 +86,7 @@ public class LocalProjectPipelineExtensionDetector extends APipelineExtensionDet
 
 			try {
 				clazz = Class.forName( classname );
-			} catch( ClassNotFoundException e ) {
+			} catch( NoClassDefFoundError e ) {
 				failures.put( classname, e );
 				continue;
 			}
